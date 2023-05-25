@@ -9,7 +9,7 @@ import Foundation
 struct SwiftOutput: Codable {
     let id, title: String
     let type: MediaTypeEnum
-    let url: String
+    let url: URL
 }
 
 // MARK: SwiftOutput convenience initializers and mutators
@@ -34,7 +34,7 @@ extension SwiftOutput {
         id: String? = nil,
         title: String? = nil,
         type: MediaTypeEnum? = nil,
-        url: String? = nil
+        url: URL? = nil
     ) -> SwiftOutput {
         return SwiftOutput(
             id: id ?? self.id,
