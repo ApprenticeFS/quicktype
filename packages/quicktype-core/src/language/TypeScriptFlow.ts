@@ -145,6 +145,11 @@ export abstract class TypeScriptFlowBaseRenderer extends JavaScriptRenderer {
                 if (transformedStringType.kind === "date-time") {
                     return singleWord("Date");
                 }
+
+                if (transformedStringType.kind === "url-string") {
+                    return singleWord("URL");
+                }
+
                 return singleWord("string");
             }
         );

@@ -1,0 +1,27 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "type": {
+      "$ref": "#/definitions/MediaTypeEnum"
+    },
+    "url": {
+      "type": "string",
+      "format": "url-string"
+    }
+  },
+  "additionalProperties": false,
+  "required": ["id", "title", "type", "url"],
+  "definitions": {
+    "MediaTypeEnum": {
+      "enum": ["image", "video"],
+      "type": "string"
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}
